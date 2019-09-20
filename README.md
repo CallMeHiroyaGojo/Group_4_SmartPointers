@@ -28,10 +28,15 @@ In this project you will review some advanced features of C++ and related librar
 One topic per group. Please select one. Selection is first come first served. Once picked by a group, that topic is not available to others; two groups can't have the same topic. Once picked, each group must create a group discussion with the same topic they picked. Then the instructor will give you further guidance such as where to look and what to do specifically for each project. The instructor will communicate you through this discussion channel. 
 
 1. C++ smart pointers __(we are this group)__
+
 ~~2. C++ unit testing~~
+
 ~~3. C++ exception handling~~
+
 ~~4. Parallel programming with C++ using OpenMP~~
+
 ~~5. Persistence in C++~~
+
 ~~6. Eigen: a C++ template library for linear algebra~~
 
 ## Submission:
