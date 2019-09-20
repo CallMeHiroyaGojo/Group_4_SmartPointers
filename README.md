@@ -1,4 +1,4 @@
-![man git](https://imgur.com/a/jIj84NY)
+![man git](https://i.imgur.com/MKe2E4a.png)
 # Group_4_SmartPointers
 For group project on SmartPointers
 
