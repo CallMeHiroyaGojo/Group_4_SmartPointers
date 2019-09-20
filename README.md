@@ -3,7 +3,9 @@ For group project on SmartPointers
 
 Useful tutorial links:
 [Mac git Installation & basics of creating and modifying a repository](https://www.youtube.com/watch?v=0Icla6TVNNo)
+
 [Windows version of the above](https://www.youtube.com/watch?v=sBTAkHOxvOk)
+
 [contributing in Git Repos - branching and merging](https://www.youtube.com/watch?v=GZILYABgAoo)
 
 
