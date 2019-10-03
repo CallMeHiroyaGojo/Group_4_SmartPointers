@@ -26,14 +26,15 @@
     * for win cmd > first go to a folder you would like to hold this project, click on the address bar, then 
       you will see the addr being highlighted, and while its highlighted, type cmd and hit    
       enter, a cmd console window will pop up. Now type git init
-    * for mac/linux/unix terminal > open terminal, cd /to/where/ever/your/project/directory/is,
+    * for mac/linux/unix terminal > open terminal, type cd /to/where/ever/your/project/directory/is,
       then type git init
  
 ### 4. fork my repo and clone it into ur project folder
     * go to my repo(posted in group discussion), then click on fork if you havent already
     * then under your profile, click on the green clone or download button, and click on copy to clipboard
       (or use this link here: https://github.com/CallMeHiroyaGojo/Group_4_SmartPointers.git)
-    * type git clone https://github.com/CallMeHiroyaGojo/Group_4_SmartPointers.git
+    * type git clone https://github.com/CallMeHiroyaGojo/Group_4_SmartPointers.git (replace the url with your
+      groups repo if you're not group 4)
     
 ### 5. make your own branch and checkout to it
     * type git branch PutYourBranchNameHere (can be whatever, it could yell at you for using illegal 
@@ -44,22 +45,21 @@
     * git status, your bread and butter for knowing wth is going on with this shit
     * in order: 1.you want to add whatever, 2.save what you've added(maybe leave a comment), 3.push it 
       onto GitHub (publish)(under your branch ofc, I gets to merge two branches together)
-    * 1. type git add yourfilename.something (whatever your file might be, at your project directory ofc)
-      (git add file need to be typed every time you modify a file)
+    * 6.1. type git add yourfilename.someextention (need to type this whenever you modified a file)
         1.5 oh yeah, almost forgot, to add something 
            1.5.1 win cmd type type nul > hello.txt (after you enter, there will be an empty hello.txt,
                  and you can create anything with any extention you pc support)
            1.5.2 mac terminal type touch hello.txt (same as above)
            1.5.3 for both versions, you can type mkdir folder to make a folder(or dir)
-    * 2. type git commit -m "I added this and that -dan" in order to save your changes you made locally,
-         you need to commit (with a message)
-    * 3. type git push -u origin PutYourBranchNameHere
+    * 6.2. type git commit -m "I added this and that -dan" in order to save your changes you made locally,
+           you need to commit (with a message)
+    * 6.3. type git push -u origin PutYourBranchNameHere
             push means you are uploading your changes to github 
             -u means upstream(tracking) 
             origin means github
             and last field is your branch
-    * 4. our each individual work flow should be something like: add > commit > push onto ur branch,
-         i'll do something like merge our branches onto the master branch when its ready
+    * 6.4. our each individual work flow should be something like: add > commit > push onto ur branch,
+           i'll do something like merge our branches onto the master branch when its ready
     
     
 
