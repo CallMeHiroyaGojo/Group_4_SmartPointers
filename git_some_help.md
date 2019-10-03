@@ -8,10 +8,11 @@
 ### 1. Set up git:
     * First, you need a terminal(or if you are on Win, use Win Command Line)
     * Then you will need to go to the official git download site: 
+    * install it 
     
 [the official git download site](https://git-scm.com/downloads)
 
-//or if you would like to install a terminal on your Win, follow this guide:
+    * if you would like to install a terminal on your Win, follow this guide:
 
 [easy bash on your Win10](https://www.windowscentral.com/how-install-bash-shell-command-line-windows-10)
 
@@ -57,8 +58,11 @@
             -u means upstream(tracking) 
             origin means github
             and last field is your branch
+    * 4. our each individual work flow should be something like: add > commit > push onto ur branch,
+         i'll do something like merge our branches onto the master branch when its ready
     
     
 
 sorry for taking a dump on your english linguistic ocd *laughs in english third language* 
+
 gnite -dan Oct 3 12:56:51am signing off
