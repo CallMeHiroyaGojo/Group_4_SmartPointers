@@ -31,15 +31,16 @@
  
 ### 4. fork my repo and clone it into ur project folder
     * go to my repo(posted in group discussion), then click on fork if you havent already
-    * then under your profile, click on the green clone or download button, and click on copy to clipboard
-      (or use this link here: https://github.com/CallMeHiroyaGojo/Group_4_SmartPointers.git)
-    * type git clone https://github.com/CallMeHiroyaGojo/Group_4_SmartPointers.git (replace the url with your
-      groups repo if you're not group 4)
+    * then under your profile(NOT MINE, urs), click on the green clone or download button, and click on copy
+      to clipboard
+    * type git clone [paste ur url here], then everything should be up to date with the master branch of our
+      repo.
     
 ### 5. make your own branch and checkout to it
     * type git branch PutYourBranchNameHere (can be whatever, it could yell at you for using illegal 
       characters idk, i named mine dansBranch)
     * type git checkout PutYourBranchNameHere (same branch you created)
+    * to save 
     
 ### 6. now i'll attempt to squish a few essential commands here in a rush cuz i wanna sleep
     * git status, your bread and butter for knowing wth is going on with this shit
