@@ -7,6 +7,12 @@
 //
 
 #include <iostream>
+using namespace std;
+
+{
+    void show Sample()
+    
+}
 
 int main(int argc, const char * argv[]) {
     // insert code here...
