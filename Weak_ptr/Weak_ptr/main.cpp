@@ -7,14 +7,13 @@
 //
 
 /*
- To understand weak_ptr, one must understand shared_ptr and unique_ptr.
-
- A "strong" reference refers to
- The weak_ptr provides a reference to an object that is already pointed to by a shared_ptr.
- A weak_ptr does not increase the reference count for the object being pointed to.
- A weak_ptr does not own the memory responsible for the object. Therefore, a weak_ptr cannot
- affect the lifetime of the object
- The purpose of a weak_ptr is to give the programmer the ability to have two objects reference eachother
+ This program demonstrates how weak pointers can be used.
+ 1. First we set up a simple class called Box.
+ 2. In main() we create an instance of box called b1.
+ 3. Then we create a few shared pointers to the b1 object.
+ 4. We create a weak pointer.
+ 5. We use the weak pointer to demonstrate that the b1 object is not "alive".
+ 6. We demonstrate what happens if we don't use a weak pointer.
  */
 #include <iostream>
 #include <memory>
@@ -27,8 +26,23 @@ private:
     int length;
 
 public:
+
     Box()
-    {}
+    {
+        std::cout << "Enter height: ";
+        std::cin >> height;
+        std::cout << "Enter width: ";
+        std::cin >> width;
+        std::cout << "Enter length: ";
+        std::cin >> length;
+    }
+    void printInfo()
+    {
+        std::cout << "Box Info \n";
+        std::cout << "Box height: " << height <<
+        " Box width: " << width << " Box length: " << length <<
+        "\nBox volume: " << length * width * length <<std::endl;
+    }
 };
 
 int main()
@@ -36,41 +50,49 @@ int main()
     // Create an instance of a class
     Box b1;
 
-    // Create shared pointers all pointing to the same obect.
+    // Create shared pointers all pointing to the same obect (b1).
     // Right now, the Manager object for the object b1 has a reference count of 3.
     auto sharedPointer1 = std::make_shared<Box>(b1);
     auto sharedPointer2 = sharedPointer1;
     auto sharedPointer3 = sharedPointer1;
 
-    // This statment creates a weak_ptr
-    std::weak_ptr<Box> wkptr1 = sharedPointer1;
-    auto wkptr2 = wkptr1;
+    // Access the b1 object with a shared pointer;
+    sharedPointer1->printInfo();
 
+
+    // Access the b1 object with a different shared pointer;
+    sharedPointer2->printInfo();
+
+    // Access the b1 object with a different shared pointer;
+    sharedPointer3->printInfo();
+
+
+    // At this point, there are multiple shared pointers pointing to the same object.
+    // There could come a time in a large program that we lose track of
+    // the shared pointer. We may access an object even if the object is no longer in memory.
+    // To demonstrate how this works we set the shared pointers to null.
+
+      sharedPointer1 = nullptr;
+      sharedPointer2 = nullptr;
+      sharedPointer3 = nullptr;
+
+    // This statment creates a weak_ptr and points it to the b1 object.
+    // Using the "expired" method of the weak pointer wkptr1, we check to see if
+    // the object b1 still exists. The b1 object does not exist so the statement
+    // "The b1 object is no longer "alive" is printed to the console.
+
+    std::weak_ptr<Box> wkptr1 = sharedPointer1;
+    if (wkptr1.expired()) {
+        std::cout<< "The b1 object is no longer \"alive\"\n";
+    } else
+        sharedPointer1->printInfo();
+
+    // The Below code is commented out.
+    // If you were to run this code, you would receive an error because
+    // this code attempt to have a shared pointer acces an object that is no longer
+    // "alive".
+
+    //    sharedPointer2->printInfo();
 
     return 0;
 }
-
-//std::weak_ptr<int> gw;
-//
-//void observe()
-//{
-//    std::cout << "use_count == " << gw.use_count() << ": ";
-//    if (auto spt = gw.lock()) { // Has to be copied into a shared_ptr before usage
-//    std::cout << *spt << "\n";
-//    }
-//    else {
-//        std::cout << "gw is expired\n";
-//    }
-//}
-//
-//int main()
-//{
-//    {
-//        auto sp = std::make_shared<int>(42);
-//    gw = sp;
-//
-//    observe();
-//    }
-//
-//    observe();
-//}
